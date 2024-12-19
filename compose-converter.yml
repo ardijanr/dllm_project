@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tfjs_converter:
+    image: tensorflow/tensorflow:latest-gpu
+    volumes:
+    - ./native:/app/:z
+    working_dir: /app
+    command: >
+      sh -c " pip install tensorflowjs && tensorflowjs_converter --input_format=tf_saved_model --output_format=tfjs_graph_model --saved_model_tags=serve model_cache/openai-community--gpt2-medium-tfjs/saved_model/1/ model_cache/tfjs-models/models--openai-community--gpt2-medium-tfjs "
+    stdin_open: true
+    tty: true

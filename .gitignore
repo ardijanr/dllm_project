@@ -1,0 +1,7 @@
+.env
+content
+[Nn]ode_modules
+[Bb]uild
+
+native/model_cache
+native/converted_model

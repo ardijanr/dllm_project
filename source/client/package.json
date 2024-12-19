@@ -1,0 +1,16 @@
+{
+  "name": "dllm_project",
+  "version": "1.0.0",
+  "description": "distributed llm inference on webgpu",
+  "main": "source/server/index.js",
+  "scripts": {
+    "build": "bun bun build client/client.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ardijan Rexhaj",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.21.0",
+    "@tensorflow/tfjs-backend-webgpu": "^4.21.0"
+  }
+}
